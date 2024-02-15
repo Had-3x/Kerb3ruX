@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Kerb3ruX.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['db/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
