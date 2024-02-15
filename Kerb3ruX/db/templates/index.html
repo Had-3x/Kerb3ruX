@@ -5,9 +5,17 @@
     <title>db Test</title>
 </head>
 <body>
-    <div name="console">
-        console
-    </div>
-    <input type="text" name="" id="command">
+    <form method="get" action="">{% csrf_token %}
+        <label for="command">command: </label><input type="text" id="command" name="command">
+        <button type="submit">Submit!</button>
+    </form>
+
+
+    {% if command %}
+        Command: {{command}}<br>
+        Response: {{response}}
+    {% else %}
+        No command sent yet
+    {% endif %}
 </body>
 </html>
