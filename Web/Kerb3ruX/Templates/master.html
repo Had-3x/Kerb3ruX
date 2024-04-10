@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'FontAwesome/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'FontAwesome/sharp-solid.css' %}">
+    <link rel="stylesheet" href="{% static 'master.css' %}">
+    {% block head %} {% endblock head %}
+</head>
+<body>
+    <div class="main">
+    {% if messages %}
+      <link rel="stylesheet" href="{% static 'toast.css' %}">
+      <script src="{% static 'toast.js' %}"></script>
+      <script>
+        const toasts = new Toasts({
+            width: 300,
+            timing: 'ease',
+            duration: '.5s',
+            dimOld: false,
+            position: 'bottom-right'
+        });
+        </script>
+
+      {% for message in messages %}
+        <script>
+          toasts.push({
+            title: '{{message.tags.capitalize}}',
+            content: '{{message}}',
+            style: '{{message.tags}}',
+            dismissAfter: '10s',
+            closeButton: true,
+            link: '',
+            linkTarget: '_blank',
+            onOpen: toast => {
+            },
+            onClose: toast => {
+            }
+          });
+        </script>
+      {% endfor %}
+    {% endif %}
+
+    {% include "navbar.html" %}
+    <div class="hero">
+      <h1>{% block hero %}{% endblock hero %}</h1>
+    </div>
+    <div>
+      {% block content %} {% endblock content %}
+    </div>
+  </div>
+</body>
+</html>

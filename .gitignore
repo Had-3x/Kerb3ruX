@@ -1,2 +1,3 @@
 .vscode/
-Test/
+Test/__pycache__
+*.log

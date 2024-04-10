@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+		<title>Toast Notifications JS</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+        <style>
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }            
+        </style>
+	</head>
+	<body>
+        <script src="index.js"></script>
+        <script>
+        const toasts = new Toasts({
+            width: 300,
+            timing: 'ease',
+            duration: '.5s',
+            dimOld: false,
+            position: 'top-right' // top-left | top-center | top-right | bottom-left | bottom-center | bottom-right
+        });
+        </script>
+        <script>
+        toasts.push({
+            title: 'Dark Toast',
+            content: 'Click me to visit CodeShack!',
+            style: 'dark',
+            closeButton: false,
+            link: 'https://codeshack.io',
+            linkTarget: '_blank',
+            onOpen: toast => {
+                console.log(toast);
+            },
+            onClose: toast => {
+                console.log(toast);
+            }
+        });
+
+        toasts.push({
+            title: 'Success Toast',
+            content: 'My notification description.',
+            style: 'success',
+            dismissAfter: '3s',
+        });
+
+        toasts.push({
+            title: 'Verified Toast',
+            content: 'My notification description.',
+            style: 'verified'
+        });
+
+        toasts.push({
+            title: 'Error Toast',
+            content: 'My notification description.',
+            style: 'error'
+        });
+
+        toasts.push({
+            title: 'Toast',
+            content: 'My notification description.'
+        });
+
+        // Press SPACE to add a custom toast
+        window.onkeyup = event => {
+            if (event.key == ' ') {
+                toasts.push({
+                    title: 'Custom ' + (toasts.numToasts+1),
+                    content: 'Custom description ' + (toasts.numToasts+1) + '.'
+                });
+            }
+        };
+        </script>
+    </body>
+</html>

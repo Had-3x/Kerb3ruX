@@ -1,0 +1,63 @@
+{% extends "master.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    
+    <title>Dashboard</title>
+    {% endblock head%}
+</head>
+<body>
+    {% block hero %}Dashboard{% endblock hero %}
+    {% block content %}
+    <div class="monitor_content">
+        <div class="monitor_content_box monitor_world"> {% include 'cesiumjs.html' %} </div>
+        <div class="monitor_content_box monitor_slaves">
+            <div class="monitor_slaves_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IP</th>
+                            <th>location</th>
+                            <th>OS</th>
+                            <th>Last Report</th>
+                            <th>master</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10.0.4.5</td>
+                            <td>-50,-60</td>
+                            <td class="FAB">&#xf17a;</td>
+                            <td>Ayer</td>
+                            <td>Venom</td>
+                        </tr>
+                        <tr>
+                            <td>10.0.4.6</td>
+                            <td>-50,-70</td>
+                            <td class="FAB">&#xf17c;</td>
+                            <td>Hoy</td>
+                            <td>Hask</td>
+                        </tr>
+                        <tr>
+                            <td>10.0.4.7</td>
+                            <td>-80,-60</td>
+                            <td class="FAB">&#xf17b;</td>
+                            <td>Ah?</td>
+                            <td>Uya</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="monitor_slaves_search">
+                <input type="text" onmouseout="this.value = ''; this.blur();" placeholder="Start typing to search...">
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'dashboard.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>
