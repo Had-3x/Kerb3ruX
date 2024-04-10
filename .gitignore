@@ -1,3 +1,4 @@
 .vscode/
 Test/__pycache__
 *.log
+.gitignore
