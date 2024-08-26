@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<body>
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fa-sharp fa-bars" id="btn"></i>
+        <i class="fa-sharp fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Kerb3ruX</header>
+        <a href="#" id="Monitor">
+            <i class="fa-sharp fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#" id="Builder">
+            <i class="fa-sharp fa-solid fa-helmet-safety"></i>
+            <span>Builder</span>
+        </a>
+        <a href="#" id="Console">
+            <i class="fa-sharp fa-solid fa-terminal"></i>
+            <span>Console</span>
+        </a>
+        <a href="#" id="Network">
+            <i class="fa-sharp fa-solid fa-circle-nodes"></i>
+            <span>Network</span>
+        </a>
+        <a href="#" id="Server">
+            <i class="fa-sharp fa-solid fa-server"></i>
+            <span>Server</span>
+        </a>
+        <footer>
+            <a href="/logout">
+                <i class="fa-sharp fa-solid fa-right-from-bracket fa-flip-horizontal"></i>
+                <span>Log Out</span>
+            </a>
+        </footer>
+    </div>
+    <script>
+        document.getElementById(document.title).classList.add("active");
+    </script>
+</body>
+
+</html>

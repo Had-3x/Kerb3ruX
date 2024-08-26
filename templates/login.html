@@ -1,0 +1,89 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'FontAwesome/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'FontAwesome/sharp-solid.css' %}">
+  <link rel="stylesheet" href="{% static 'master.css' %}">
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+  <title>Kerb3ruX</title>
+</head>
+
+<body>
+  <div class="main">
+
+    {% if messages %}
+      <link rel="stylesheet" href="{% static 'toast.css' %}">
+      <script src="{% static 'toast.js' %}"></script>
+      <script>
+        const toasts = new Toasts({
+            width: 300,
+            timing: 'ease',
+            duration: '.5s',
+            dimOld: false,
+            position: 'bottom-right'
+        });
+        </script>
+
+      {% for message in messages %}
+        <script>
+          toasts.push({
+            title: '{{message.tags.capitalize}}',
+            content: '{{message}}',
+            style: '{{message.tags}}',
+            dismissAfter: '',
+            closeButton: true,
+            link: '',
+            linkTarget: '_blank',
+            onOpen: toast => {
+            },
+            onClose: toast => {
+            }
+          });
+        </script>
+      {% endfor %}
+    {% endif %}
+    <div class="wrapper">
+      <div class="title">
+        <div class="profile">
+          <img src="{% static 'profile.png' %}">
+        </div>
+        <div class="name">
+          Kerb3ruX
+        </div>
+        <div class="by">
+          By Had3x
+        </div>
+      </div>
+      <div class="login">
+          <form method="post" autocomplete="off">
+            {% csrf_token %}
+            <div class="field">
+              <input
+                type="text" name="username" maxlength="50"
+                autocapitalize="none"
+                required
+              />
+              <label>Username</label>
+            </div>
+            <div class="field">
+              <input
+                type="password" name="password"
+                required
+              />
+              <label>Password</label>
+            </div>
+            <div class="field">
+              <input type="submit" value="Login"/>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

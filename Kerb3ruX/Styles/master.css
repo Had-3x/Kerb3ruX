@@ -1,0 +1,179 @@
+@font-face {
+    font-family: FontAwesome;
+    src: url(/static/FontAwesome/fa-sharp-solid-900.woff2);
+}
+
+@font-face {
+    font-family: FontAwesomeBrands;
+    src: url(/static/FontAwesome/fa-brands-400.woff2);
+}
+
+:root{
+    --gray-900: #212529;
+    --gray-800: #343A40;
+    --gray-700: #495057;
+    --gray-600: #6C757D;
+    --gray-500: #adb5bd;
+    --gray-400: #CED4DA;
+    --gray-300: #DEE2E6;
+    --gray-200: #E9ECEF;
+    --gray-100: #F8F9FA;
+
+    --blue-900: #031633;
+    --blue-800: #052C65;
+    --blue-700: #084298;
+    --blue-600: #0A58CA;
+    --blue-500: #0D6EFD;
+    --blue-400: #3D8BFD;
+    --blue-300: #6EA8FE;
+    --blue-200: #9EC5FE;
+    --blue-100: #CFE2FF;
+
+    --indigo-900: #140330;
+    --indigo-800: #290661;
+    --indigo-700: #3D0A91;
+    --indigo-600: #520DC2;
+    --indigo-500: #6610F2;
+    --indigo-400: #8540F5;
+    --indigo-300: #A370F7;
+    --indigo-200: #C29FFA;
+    --indigo-100: #E0CFFC;
+
+    --purple-900: #160D27;
+    --purple-800: #2C1A4D;
+    --purple-700: #432874;
+    --purple-600: #59359A;
+    --purple-500: #6f42C1;
+    --purple-400: #8C68CD;
+    --purple-300: #A98EDA;
+    --purple-200: #C5B3E6;
+    --purple-100: #E2D9f3;
+
+    --pink-900: #2B0A1A;
+    --pink-800: #561435;
+    --pink-700: #801f4f;
+    --pink-600: #AB296A;
+    --pink-500: #D63384;
+    --pink-400: #DE5C9D;
+    --pink-300: #E685B5;
+    --pink-200: #EfADCE;
+    --pink-100: #f7D6E6;
+
+    --red-900: #2C0B0E;
+    --red-800: #58151C;
+    --red-700: #842029;
+    --red-600: #B02A37;
+    --red-500: #dc3545;
+    --red-400: #E35D6A;
+    --red-300: #EA868f;
+    --red-200: #f1AEB5;
+    --red-100: #f8D7DA;
+
+    --orange-900: #331904;
+    --orange-800: #653208;
+    --orange-700: #984c0c;
+    --orange-600: #ca6510;
+    --orange-500: #fd7e14;
+    --orange-400: #fd9843;
+    --orange-300: #feb272;
+    --orange-200: #fecba1;
+    --orange-100: #ffe5d0;
+
+    --yellow-900: #332701;
+    --yellow-800: #664d03;
+    --yellow-700: #997404;
+    --yellow-600: #cc9a06;
+    --yellow-500: #ffc107;
+    --yellow-400: #ffcd39;
+    --yellow-300: #ffda6a;
+    --yellow-200: #ffe69c;
+    --yellow-100: #fff3cd;
+
+    --green-900: #051b11;
+    --green-800: #0a3622;
+    --green-700: #0f5132;
+    --green-600: #146c43;
+    --green-500: #198754;
+    --green-400: #479f76;
+    --green-300: #75b798;
+    --green-200: #a3cfbb;
+    --green-100: #d1e7dd;
+
+    --teal-900: #06281e;
+    --teal-800: #0d503c;
+    --teal-700: #13795b;
+    --teal-600: #1aa179;
+    --teal-500: #20c997;
+    --teal-400: #4dd4ac;
+    --teal-300: #79dfc1;
+    --teal-200: #a6e9d5;
+    --teal-100: #d2f4ea;
+
+    --cyan-900: #032830;
+    --cyan-800: #055160;
+    --cyan-700: #087990;
+    --cyan-600: #0aa2c0;
+    --cyan-500: #0dcaf0;
+    --cyan-400: #3dd5f3;
+    --cyan-300: #6edff6;
+    --cyan-200: #9eeaf9;
+    --cyan-100: #cff4fc;
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /*--------------------------------------------------------------------------------------------------------*/
+
+    --primary: var(--gray-900);
+    --secondary: var(--gray-700);
+    --tertiary: var(--gray-500);
+
+    --danger-primary: var(--red-900);
+    --danger-secondary: var(--red-700);
+    --danger-tertiary: var(--red-500);
+
+    --warning-primary: var(--yellow-900);
+    --warning-secondary: var(--yellow-700);
+    --warning-tertiary: var(--yellow-500);
+
+    --info-primary: var(--cyan-900);
+    --info-secondary: var(--cyan-700);
+    --info-tertiary: var(--cyan-500);
+
+    --success-primary: var(--green-900);
+    --success-secondary: var(--green-700);
+    --success-tertiary: var(--green-500);
+
+    --light-primary: var(--gray-500);
+    --light-secondary: var(--gray-300);
+    --light-tertiary: var(--gray-100);
+}
+
+html{
+    height: 95dvh;
+    width: 100%;
+}
+
+body{
+    background-image: url("/static/back.png");
+    background-color: var(--gray-900);
+    height: 95dvh;
+    font-family: FontAwesome;
+    font-size: medium;
+}
+
+.FAB{
+    font-family: FontAwesomeBrands;
+}
+
+.hero{
+    width: 100%;
+}
+
+.hero h1{
+    color: var(--white);
+    padding-left: 80px;
+    padding-top: 5px;
+    font-size: 50px;
+    letter-spacing: 5px;
+}

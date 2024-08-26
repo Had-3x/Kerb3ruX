@@ -1,0 +1,142 @@
+.main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    border-radius: 15px;
+    width: 60dvh;
+    height: fit-content;
+    background-color: var(--primary);
+}
+
+.wrapper .title{
+    position: relative;
+    width: fit-content;
+    height: 30%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: linear-gradient(-90deg, var(--gray-700), var(--gray-900));
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+.wrapper .title .profile{
+    grid-area: 1 / 1 / 3 / 2;
+    margin: 10px;
+    align-items: center;
+}
+
+.wrapper .title .profile img{
+    position: relative;
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper .title .name{
+    text-align: left;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.wrapper .title .name{
+  font-size: xx-large;
+  letter-spacing: 2px;
+  position: relative;
+  top: 50%;
+  color: var(--gray-100);
+}
+
+.wrapper .title .by{
+    padding-top: 2px;
+    color: var(--gray-600);
+}
+
+.wrapper form{
+    padding: 10px 30px 10px 30px;
+  }
+  
+  .wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .wrapper form .field input{
+    height: 100%;
+    width: 95%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    background: var(--gray-700);
+    border: 1px solid var(--gray-600);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    color: var(--gray-600);
+  }
+
+  .wrapper form .field input:focus,
+  form .field input:valid{
+    border-color: var(--gray-700);
+  }
+  
+  .wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: var(--gray-600);
+    font-size: medium;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
+  form .field input:focus ~ label,
+  form .field input:valid ~ label{
+    top: 0%;
+    padding: 3px;
+    font-size: 16px;
+    color: var(--gray-600);
+    background: var(--gray-700);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+  }
+  
+  form .field input[type="submit"]{
+    color: var(--gray-100);
+    width: 100%;
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, var(--gray-700), var(--gray-800));
+    transition: all 0.3s ease;
+  }
+  form .field input[type="submit"]:active{
+    transform: scale(0.95);
+  }
+  form .signup-link{
+    color: var(--gray-700);
+    margin-top: 20px;
+    text-align: center;
+  }
+  form .pass-link a,
+  form .signup-link a{
+    color: #4158d0;
+    text-decoration: none;
+  }
+  form .pass-link a:hover,
+  form .signup-link a:hover{
+    text-decoration: underline;
+  }
