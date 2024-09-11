@@ -1,8 +1,9 @@
 body{
     margin : 0;
     padding : 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Fira Code';
     background: linear-gradient(150deg,#17202a, #1c2833 );
+    background-image: url("Background.png");
     height: 100vh;
 }
 
@@ -13,7 +14,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    background:    #2e4053  ;
+    background:    #252630  ;
     border-radius: 10px;
 }
 
@@ -112,13 +113,10 @@ form .username{
 
     margin: -5px 0 20px 5px;
 
-    color: rgb(14, 14, 105);
-
+    color: rgb(0, 0, 185);
     cursor: pointer;
 
 }
-
-
 
 .recordar:hover {
 
@@ -134,11 +132,13 @@ input[type="submit"]{
 
     border: 1px solid;
 
-    background:  #2c3e50 ;
+    background:  #252630 ;
 
     border-radius: 25px;
 
     font-size: 18px;
+    
+    font-family: 'Fira Code';
 
     color: white;
 
@@ -156,32 +156,4 @@ input[type="submit"]:hover{
 
 }
 
-.registrarse{
 
-    margin: 30px 0;
-    
-    text-align: center;
-    
-    font-size: 16px;
-    
-    color: black;
-    
-    }
-    
-    
-    
-    .registrarse a{
-    
-        color: rgb(14, 14, 105);
-    
-        text-decoration: none;
-    
-    }
-    
-    
-    
-    .registrarse a:hover {
-    
-        text-decoration: underline;
-    
-    }
